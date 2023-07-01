@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">-->
+ <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+ 
+  <title>Frontend Mentor | Product preview card component</title>
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@800&family=Montserrat:wght@500;700&family=Noto+Sans:wght@100&display=swap" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Hanken+Grotesk:wght@800&family=Montserrat:wght@500;700&family=Noto+Sans:wght@100&display=swap" rel="stylesheet">
+  
+  
+  <style>
+  
+  * {box-sizing: border-box;}
+    
+  body {
+    font-family: 'Montserrat','Fraunces', sans-serif;
+    background-color: hsl(30, 38%, 92%);
+    padding: 28px 0px 24px 0px;
+    height: auto;
+    color: hsl(228, 12%, 48%);
+    }
+    
+  .container {
+     width: 91.4667%;
+    height: auto;
+    background-color: hsl(0, 0%, 100%); 
+    border-radius: 8px;
+    margin: auto;
+    padding-bottom: 24px;
+    }
+    
+  .imagemobile {
+    width: 100%;
+    height: auto;
+    max-width: 686px;
+    border-radius: 8px 8px 0px 0px;
+    }
+    
+  .imagedesktop {
+    display: none;
+    }
+    
+  .perfume {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 4.29px;
+    margin: 26px 0 14px 7.5%;
+    font-size: 13px;
+    }
+    
+  .gabrielle {
+    font-weight: 700;
+    font-family: Fraunces;
+    margin: 0 7.5%;
+    font-size: 33px;
+    letter-spacing: -1px;
+    word-spacing: -1px;
+    color: hsl(212, 21%, 14%);
+    }
+    
+  .afloral {
+    margin: 14px 7.5%;
+    font-weight: 500;
+    word-spacing: -1px;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.2px;
+    }
+       
+  .price {
+    line-height 60px;
+    height: 60px;
+    margin-top: 17px;
+    }
+    
+   .newprice {
+    color: hsl(158, 36%, 37%);
+    font-size: 33px;
+    font-family: Fraunces;
+    margin: 0px 25px 0 7.5%;
+    display: inline-block;
+    line-height: 1.5;
+    vertical-align: middle;
+     }
+     
+  .oldprice {
+    font-size: 13px;
+    display: inline-block;
+    line-height: 1.5;
+    vertical-align: middle;
+        }
+    
+  .button {
+    display: block;
+    background-color: hsl(158, 36%, 37%);
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    margin: auto;
+    width: 295px; 
+    }
+  .imgcart {
+    margin-right: 15px;
+    margin-left: 0px;
+  }
+ .button a:link, a:visited {
+   display: inline-block;
+   width: 295px;
+   height: 48px;  
+   border-radius: 7px;
+   padding: 16px 0 16px 0;
+   font-size: 14px;
+   text-align: center;
+   text-decoration: none;
+   color: hsl(0, 0%, 100%);
+     }
+    
+  .button a:hover, a:active {
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(156, 42%, 18%);
+      }
+       
+    .attribution { font-size: 11px; text-align: center; position: fixed;
+  bottom:0;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+ 
+ /* Media*/
+/* Media*/
+/* Media*/
+
+ @media screen and (min-width: 730px) {
+  
+   .container {
+  width: 600px;
+  height: 450px;
+  transform: translate(0%,50%);
+      }
+         
+   .imagemobile {
+  display: none;
+     }
+    
+    .imagedesktop {
+   float: left;
+   display: inline-block;
+   width: 50%;
+   height: auto;
+   max-width: 300px;
+   border-radius: 8px 0px 0px 8px;
+    }
+
+     .content {
+    width: 300px;
+    height: 450px;
+    float: right;
+    padding: 32px;
+    } 
+  
+   .perfume {
+  margin: 0 0 22px 0;
+    }
+    
+    .gabrielle {
+   line-height: 1;
+   margin: 0;
+     }
+    
+    .afloral {
+   margin: 20px 0;
+    }
+         
+     .newprice {
+   margin: 0px 25px 0 0;
+        }
+     
+    .button {
+ width: 236px;  
+ position: fixed;
+ bottom: 32px;
+    }
+ 
+   .button a:link, a:visited {
+  width: 236px;
+     }
+  }/*media*/
+    
+    
+    @media screen and (max-width: 340px) {
+     .container {
+    width: 100%;
+    padding: 5px;
+     }
+     
+     .button {
+   transform: scaleX(70%);
+   margin: auto;
+   margin-left: -8%;
+   }
+    
+    .imgcart {
+  float: center;
+    }       
+  }/*media*/
+    
+ </style>
+</head>
+<body>
+<div class="container">
+<img class="imagemobile" src="image-product-mobile.jpg" alt="" width="686px" height="480px">
+<img class="imagedesktop" src="image-product-desktop.jpg" alt="" width="600px" height="900px">
+
+
+<div class="content">
+
+  <h2 class="perfume">Perfume</h2>
+
+ <h1 class="gabrielle">Gabrielle Essence Eau De Parfum</h1>
+
+  <h5 class="afloral">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+  Perfumer-Creator for the House of CHANEL.</h5>
+
+ <div class="price"><span class="newprice"> $149.99</span><span class="oldprice"><del class="oldprice">
+  $169.99</del></span></div>
+
+  <div class="button" >
+  <a href="default.asp" target="_blank"><img class="imgcart" src="icon-cart.svg" alt="" width="14px" height="14px">Add to Cart</a>
+  </div>
+</div>
+  
+
+  </div>
+    <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
