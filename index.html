@@ -128,7 +128,7 @@
     background-color: hsl(156, 42%, 18%);
       }
        
-    .attribution { font-size: 11px; text-align: center; position: fixed;
+    .attribution { font-size: 11px; text-align: center; position: relative;
   bottom:0;}
     .attribution a { color: hsl(228, 45%, 44%); }
  
@@ -137,16 +137,21 @@
 /* Media*/
 
  @media screen and (min-width: 730px) {
+  body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  }
   
    .container {
   width: 600px;
   height: 450px;
-  transform: translate(0%,50%);
+ /* transform: translate(0%,50%);*/
       }
          
-   .imagemobile {
-  display: none;
-     }
+   .imagemobile {display: none;}
     
     .imagedesktop {
    float: left;
@@ -164,50 +169,42 @@
     padding: 32px;
     } 
   
-   .perfume {
-  margin: 0 0 22px 0;
-    }
+   .perfume {margin: 0 0 22px 0;}
     
     .gabrielle {
    line-height: 1;
    margin: 0;
      }
     
-    .afloral {
-   margin: 20px 0;
-    }
+    .afloral {margin: 20px 0;}
          
-     .newprice {
-   margin: 0px 25px 0 0;
-        }
+     .newprice {margin: 0px 25px 0 0;}
      
     .button {
  width: 236px;  
- position: fixed;
- bottom: 32px;
+ position: relative;
+ bottom: 0;
+ display: block;
+ margin: auto;
     }
  
-   .button a:link, a:visited {
-  width: 236px;
-     }
+   .button a:link, a:visited {width: 236px;}
   }/*media*/
-    
-    
-    @media screen and (max-width: 340px) {
+     
+    @media screen and (max-width: 350px) {
      .container {
     width: 100%;
     padding: 5px;
      }
      
      .button {
-   transform: scaleX(70%);
-   margin: auto;
-   margin-left: -8%;
+   margin: auto; 
+   padding: 0;
+   width: 200px;
    }
-    
-    .imgcart {
-  float: center;
-    }       
+
+   .button a:link, a:visited {width: 200px;}
+
   }/*media*/
     
  </style>
